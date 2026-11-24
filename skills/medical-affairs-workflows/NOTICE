@@ -1,0 +1,16 @@
+医学事务工作流 · medical-affairs-workflows 1.1.0
+
+这是独立重构版本。修改包括合并工作流、重写入口与操作规则、调整交付格式和工具依赖、补充证据留痕、保留原条目映射。按 Apache License 2.0 分发。
+
+本包参考以下来源，原有署名和归属随附。
+
+- Open Medical Affairs AI and contributors，Copyright 2026。Medical-Affairs-Skills 固定提交 006762f50e1ea28580e2965483a2b08a99253284。
+  https://github.com/Open-Medical-Affairs/Medical-Affairs-Skills/tree/006762f50e1ea28580e2965483a2b08a99253284
+- 袁一哲，nature-skills 固定提交 a65a8364b419e05f7d8d5d96842a1ff7e544b1bb。医学技能库对统计和参考文献两条作了中文改编。
+  https://github.com/Yuan1z0825/nature-skills/tree/a65a8364b419e05f7d8d5d96842a1ff7e544b1bb
+- 安未稷 / 医学技能库，Copyright 2026。Placebo 各条署名与派生历史按原版保留。
+  https://medical-skills.pages.dev/about
+
+逐条标题、版本及详情地址见 references/source-map.md。随包的 upstream-notices/ 保留各来源的许可证、NOTICE 和站方提供的第三方署名。其项目名称、日期和历史描述属于原始来源。
+
+本包的工作流面向检索、评议和起草，适用本包根目录 LICENSE。单独的官方文件、医药数据及期刊材料适用其自身条款。

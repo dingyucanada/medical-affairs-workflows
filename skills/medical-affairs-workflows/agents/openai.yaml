@@ -1,0 +1,4 @@
+interface:
+  display_name: "医学事务工作流"
+  short_description: "检索和审查医学证据，起草医学计划与沟通材料，核对安全与监管要求"
+  default_prompt: "用 $medical-affairs-workflows 处理我提供的医学事务任务，给出可核对的依据、局限和待办。"

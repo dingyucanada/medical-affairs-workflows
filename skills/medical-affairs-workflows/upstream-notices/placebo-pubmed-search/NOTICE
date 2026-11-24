@@ -1,0 +1,43 @@
+Copyright 2026 安未稷 / 医学技能库
+Author: 安未稷
+
+Placebo.PubMed 文献检索
+placebo-pubmed-search
+Version 0.1.0
+
+这是一份本站发布的重写稿，作者安未稷。许可是 Apache License, Version 2.0。它不是美国国家生物技术信息中心（NCBI）、美国国家医学图书馆或 PubMed 的官方手册，也不是临床决策建议。
+
+本目录没有把 Open Medical Affairs AI、NCBI 或美国国家医学图书馆写成 PubMed 记录或医学主题词词表的著作权人。那些公开记录和词表有各自的使用政策，不是本包的 Apache 作品。
+
+---------------------------------------------------------------------------
+1. 被重写的原技能「PubMed 文献检索」
+---------------------------------------------------------------------------
+Copyright 2026 Open Medical Affairs AI and contributors
+
+本重写稿在功能上承接 Open Medical Affairs AI 已发布的技能「PubMed 文献检索」（目录标识 pubmed-search），固定提交 006762f50e1ea28580e2965483a2b08a99253284。许可是 Apache License, Version 2.0。上游 LICENSE 和 NOTICE 原文在 provenance/licenses/oma-LICENSE、provenance/licenses/oma-NOTICE。
+
+本重写稿由安未稷重新编写执行规则，并改用 Placebo. 前缀命名。检索时不加载原技能的正文、接口说明、检索式示例或客户端脚本，也没有把这些文件复制进本包。
+
+上游 NOTICE 还写明：原项目产出的是供有资质的人审阅的草稿，不是医疗器械，不是临床决策支持，也不是监管系统中的正式记录。见本包 DISCLAIMER.md。该上游 NOTICE 同时记录，其仓库中部分其他技能在架构上参考过 K-Dense Inc. 的 MIT 许可技能；「PubMed 文献检索」并不在那张对照表里，本包也没有复制或改写 K-Dense 的文件。
+
+---------------------------------------------------------------------------
+2. 对照技能「临床试验检索」
+---------------------------------------------------------------------------
+Copyright 2026 Open Medical Affairs AI and contributors
+
+对照技能「临床试验检索」（clinical-trials-search）来自同一份 Open Medical Affairs AI 快照，许可同样是 Apache License, Version 2.0。本重写稿吸收的是检索方法，而不是 ClinicalTrials.gov 的字段手册：先看一览再取详情，记下检索式和日期，写明这个库覆盖不到什么，按试验而不是按记录归并，取证失败不得编造。本包没有复制该技能的 SKILL.md、参考文件或脚本，检索时也不依赖它们。
+
+---------------------------------------------------------------------------
+3. 对照技能「公开文献补充检索」
+---------------------------------------------------------------------------
+Copyright 2026 Open Medical Affairs AI and contributors
+
+对照技能「公开文献补充检索」（public-evidence-search）来自同一份快照，许可同样是 Apache License, Version 2.0。本重写稿吸收的是这些方法：不可用或未取得不能当成零命中；不得悄悄改用虚构数据或其他来源冒充这次检索；一篇文献能打开，不等于它支持某个具体结论。本包没有复制该技能的正文或脚本，也没有把 Europe PMC、Crossref、说明书或不良事件库的专用规则写进本技能。
+
+---------------------------------------------------------------------------
+4. 本目录中的新写与汇编
+---------------------------------------------------------------------------
+修改者：安未稷
+日期：2026-11-21（Asia/Shanghai）
+
+本目录的 SKILL.md、README.md、PROVENANCE.md、NOTICE、DISCLAIMER.md、THIRD-PARTY-NOTICES.md、MODIFICATIONS.md（在上一级目录）以及自足性检查脚本，是本次新写或改编的文本，同样按 Apache License, Version 2.0 提供。

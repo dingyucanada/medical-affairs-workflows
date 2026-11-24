@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "abstract-a",
+      "kind": "abstract",
+      "access": "retrieved",
+      "reference": "Synthetic abstract A supplied with this example",
+      "accessed_on": "2026-11-24"
+    },
+    {
+      "id": "full-text-a",
+      "kind": "full_text",
+      "access": "unavailable",
+      "reference": "Full text of synthetic study A",
+      "reason": "The full text was not made available for this exercise"
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim-1",
+      "text": "Nine of sixty enrolled adults were hospitalized within 12 weeks",
+      "scope": "Synthetic single-arm cohort; previously untreated adults meeting entry criteria",
+      "status": "supported",
+      "overstatement": false,
+      "reason": "The abstract reports the numerator, denominator and follow-up",
+      "action": "retain",
+      "evidence": [{"source_id": "abstract-a", "locator": "Results, sentence 1", "relation": "supports"}]
+    },
+    {
+      "id": "claim-2",
+      "text": "The treatment reduced hospitalization risk by 40% in all adults",
+      "scope": "All adult patients, compared with routine care",
+      "status": "insufficient",
+      "overstatement": true,
+      "reason": "The abstract reports one cohort and an unadjusted historical comparison",
+      "action": "revise",
+      "replacement": "In the enrolled single-arm cohort, 9 of 60 adults were hospitalized within 12 weeks.",
+      "evidence": [
+        {"source_id": "abstract-a", "locator": "Methods and Results", "relation": "context"},
+        {"source_id": "full-text-a", "relation": "context"}
+      ]
+    }
+  ]
+}

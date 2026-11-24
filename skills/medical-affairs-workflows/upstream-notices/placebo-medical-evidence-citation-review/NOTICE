@@ -1,0 +1,90 @@
+Placebo.医学证据与引用审查
+placebo-medical-evidence-citation-review
+Version 0.3.0
+
+This directory is a published derivative work. It is not a single-rightsholder
+replacement for the upstream skill packages, and it does not claim that this
+revision has been shown to be better than the source skills or than versions
+0.1.0 or 0.2.0 of the offline prototype. The existing catalog entries for
+those source skills remain published and are not replaced by this entry.
+
+---------------------------------------------------------------------------
+1. Open Medical Affairs AI — Medical Affairs Agent Skills
+---------------------------------------------------------------------------
+Copyright 2026 Open Medical Affairs AI and contributors
+
+This product includes software and documentation developed by
+Open Medical Affairs AI (https://github.com/Open-Medical-Affairs-AI).
+Fixed commit used as a source of this skill:
+006762f50e1ea28580e2965483a2b08a99253284
+https://github.com/Open-Medical-Affairs/Medical-Affairs-Skills
+
+Licensed under the Apache License, Version 2.0. The exact upstream LICENSE
+is at provenance/licenses/oma-LICENSE. The exact upstream NOTICE is at
+provenance/licenses/oma-NOTICE.
+
+Source skills used as derivation basis: evidence-appraisal, citation-integrity.
+Version 0.3.0 does not ship those skills' reference files or scripts as
+runtime dependencies; their attribution still applies because this entry
+absorbs rules from those works.
+
+Portions of the Open Medical Affairs AI work are architecturally derived from
+MIT-licensed skills in the K-Dense-AI/scientific-agent-skills project. No
+K-Dense files were copied into this package. See THIRD-PARTY-NOTICES.md
+and provenance/licenses/oma-THIRD-PARTY-NOTICES.md.
+
+The upstream NOTICE also states that the original project produces DRAFT
+scientific and medical content for review by qualified professionals, is not
+a medical device, not clinical decision support, and not a regulatory system
+of record. See DISCLAIMER.md.
+
+---------------------------------------------------------------------------
+2. 袁一哲 nature-skills（统计报告审查 / 参考文献逐项核验）
+---------------------------------------------------------------------------
+Upstream: https://github.com/Yuan1z0825/nature-skills
+Fixed commit: a65a8364b419e05f7d8d5d96842a1ff7e544b1bb
+
+The upstream README names 袁一哲 as founder and maintainer. The two skill
+files themselves have no separate copyright line and no sub-license that
+conflicts with the root Apache-2.0 license. This package does not name
+医学技能库, Open Medical Affairs AI, or any other party as the copyright
+holder of the unmodified upstream nature-skills text.
+
+Licensed under the Apache License, Version 2.0. The exact upstream LICENSE
+is at provenance/licenses/nature-skills-LICENSE (appendix copyright line is
+the standard placeholder). The exact upstream NOTICE is at
+provenance/licenses/nature-skills-NOTICE.
+
+The medical-skills library previously rewrote the two SKILL.md files into
+Chinese Medical Affairs usage; that change list is preserved at
+provenance/licenses/nature-skills-MODIFICATIONS.md. Version 0.3.0 does not
+ship those reference files as runtime dependencies; attribution still applies.
+
+Journal author instructions remain the journals' text. They are not Apache
+works of this package. Re-open the current journal page before stating what
+a journal requires.
+
+---------------------------------------------------------------------------
+3. Modifications and compilation in this published edition
+---------------------------------------------------------------------------
+Author: 安未稷
+Publisher: 医学技能库
+Date: 2026-11-21 (Asia/Shanghai)
+
+The entry SKILL.md, README.md, PROVENANCE.md, this NOTICE, the package
+DISCLAIMER.md, THIRD-PARTY-NOTICES.md, MODIFICATIONS.md, and the
+self-containment checker are new or modified text in version 0.3.0,
+building on the frozen offline prototype of 2026-11-20. The review rules
+in SKILL.md are unchanged from that frozen text, except frontmatter and
+the opening status wording used for publication. Those modifications and
+the compilation of this directory are also offered under the Apache
+License, Version 2.0.
+
+Copyright 2026 安未稷 / 医学技能库 applies to these modifications and to
+the compilation of this directory. It does not make 医学技能库 the
+copyright holder of the upstream Open Medical Affairs AI or nature-skills
+texts. Those remain with their original rightsholders, as recorded above.
+
+57 other Open Medical Affairs AI skills, the two nature-skills catalog
+entries, and the four medical-skills-library pharmacovigilance/regulatory
+skills remain in the catalog. Their ownership is unchanged.
