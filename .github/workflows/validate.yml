@@ -20,7 +20,9 @@ jobs:
           .venv/bin/pip install 'skills-ref @ git+https://github.com/agentskills/agentskills.git@83021e2be457a9b6679148719c1f6074f0ad975e#subdirectory=skills-ref'
       - name: Check skill format, links and tests
         run: |
-          .venv/bin/skills-ref validate skills/medical-affairs-workflows
+          for skill in skills/*/SKILL.md; do
+            .venv/bin/skills-ref validate "$(dirname "$skill")"
+          done
           python3 tools/check_links.py
           python3 -m unittest discover -s tests -v
           python3 tools/package_skill.py

@@ -1,0 +1,22 @@
+name: 更正来源或内容
+description: 报告资料过时、链接失效或适用范围错误
+body:
+  - type: markdown
+    attributes:
+      value: 请使用公开出处或合成案例。不要上传患者及企业资料。
+  - type: input
+    id: location
+    attributes:
+      label: 当前页面与位置
+    validations:
+      required: true
+  - type: textarea
+    id: discrepancy
+    attributes:
+      label: 发现的差异和可能影响
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 可回查来源、版本和适用范围

@@ -1,34 +1,32 @@
-# 医学事务工作流
+# 医学证据与健康导航
 
-[English](README.en.md) · [同类调研](docs/comparison.md) · [评测](evals/README.md) · [版本记录](CHANGELOG.md)
+[English](README.en.md) · [参考来源](SOURCES.md) · [临床覆盖](docs/clinical-coverage.md) · [同行调研](docs/comparison.md) · [发布下载](https://github.com/dingyucanada/medical-affairs-workflows/releases/latest)
 
-面向药企医学事务团队的 Agent Skill。它把文献与试验、医学声称审查、策略和上市、现场洞察、发表沟通、药物警戒及中国药政连接成七个工作流。一个入口按任务选择参考文件，交付可复核的来源、局限和下一步。
+从一次就诊前该准备什么，到一条医学主张由哪份证据支持，项目提供两项可分别安装的 Agent Skill。
 
-## 使用
+| 你想做什么 | 选用的技能 |
+| --- | --- |
+| 找科室、准备就诊、看懂报告、了解预防保健、准备慢病复诊或罕见病第二意见 | [就医与健康导航](skills/medical-health-navigation/SKILL.md) · 面向公众、患者与照护者 · 预览版 |
+| 查文献和试验、医学声称审查、制定医学计划、管理现场洞察、发表和药物警戒 | [医学事务与证据审查](skills/medical-affairs-workflows/SKILL.md) · 面向药企医学事务及生命科学团队 |
 
-在 [GitHub Releases](https://github.com/dingyucanada/medical-affairs-workflows/releases) 下载技能 ZIP 并解压。Codex 用户可将整个 `medical-affairs-workflows` 文件夹放入自己项目的 `.agents/skills/`。支持技能 ZIP 导入的客户端可使用发布资产。启动新会话后可明确调用 `$medical-affairs-workflows`。支持通用 Agent Skills 的其他客户端按其技能目录说明安装。
+## 就医与健康导航
 
-> 用 $medical-affairs-workflows 审查这页医学交流材料。只核对给定摘要能支持的声称，逐条标出处、证据状态和修订建议。
+- **科室导航**覆盖 32 类常见就医和医技入口，从全科与儿科到心内、骨科、肿瘤、精神心理及遗传咨询。帮助核实医院科名并准备资料。 [科室索引](skills/medical-health-navigation/references/specialties.md)
+- **看懂检查与诊断过程**解释术语、检查目的、报告原文和待确认的问题。急症先给就医行动。个体诊断和治疗安排由接诊团队评估。 [检查与诊断](skills/medical-health-navigation/references/tests-and-diagnosis.md)
+- **保健、慢病与罕见病**提供按地区核对筛查或疫苗、常见慢病复诊、遗传报告和罕见病第二意见的路径。 [当前覆盖与边界](docs/clinical-coverage.md)
 
-[技能入口](skills/medical-affairs-workflows/SKILL.md) · [64 条上游能力映射](skills/medical-affairs-workflows/references/source-map.md) · [官方技能安装说明](https://learn.chatgpt.com/docs/build-skills)
+> 用 $medical-health-navigation 帮我读懂这段去掉个人信息的检查结论。分开写报告原话、需要医生确认的部分和复诊时要带的问题。
 
-## 核心设计
+## 医学事务与证据审查
 
-- **证据台账**同时记录读到的来源、声称范围、证据状态和编辑动作。跨团队移交时可提供 JSON。离线检查器可找出采用未取得来源作为决定性依据、过强声称没有处置、缺少定位等结构错误。 [字段说明](skills/medical-affairs-workflows/references/ledger.md)
-- **中国监管时点核查**明确辖区、主体、产品、日期、原文和附件，分别记录已取得原文、缺失或冲突，以及应由负责人复核的事项。 [官方来源与时点](skills/medical-affairs-workflows/references/regulatory-sources.md)
-- **按任务交付**支持简短对话、结构化台账或指定格式的材料。核心流程不绑定渲染器，离线检查器使用 Python 3 标准库。外部检索和文件生成取决于宿主环境。
+七个参考工作流覆盖检索、证据综合、医学计划、发表、洞察、沟通与药政。可用统一证据台账记录来源、声称、证据状态与编辑动作。中国及跨辖区监管核对记录正式出处、适用时点和缺项。 [64 项原目录映射](skills/medical-affairs-workflows/references/source-map.md) · [证据台账](skills/medical-affairs-workflows/references/ledger.md) · [监管来源](skills/medical-affairs-workflows/references/regulatory-sources.md)
 
-适用场景为检索、起草和专业复核。涉及个体治疗、监管提交或正式批准时，由适用的临床或企业流程负责。贡献示例请使用合成或可公开的材料。
+> 用 $medical-affairs-workflows 审查这页医学交流材料。只核对给定摘要能支持的声称，逐条标出处、证据状态和修订动作。
 
-## 本地验证
+## 安装与参与
 
-```sh
-skills-ref validate skills/medical-affairs-workflows
-python3 tools/check_links.py
-python3 -m unittest discover -s tests -v
-python3 tools/package_skill.py
-```
+从 [GitHub Releases](https://github.com/dingyucanada/medical-affairs-workflows/releases/latest) 下载想用的技能 ZIP。Codex 用户解压后把完整技能文件夹放入项目的 `.agents/skills/`，在新会话中用对应技能名调用。其他兼容客户端按其目录或 ZIP 导入流程安装。 [OpenAI 技能说明](https://learn.chatgpt.com/docs/build-skills)
 
-[Agent Skills 参考校验器](https://github.com/agentskills/agentskills/tree/main/skills-ref)检查技能格式。[评测](evals/README.md)记录可供复跑的合成案例。格式、软件测试、模型行为和生产验证分别记录。
+欢迎用合成资料报告缺失科室、路由、参考来源和报告解释问题。新增病种内容需要明确适用人群、辖区、来源和临床复核状态。 [贡献指南](CONTRIBUTING.md) · [评测](evals/README.md) · [导航模拟验证](docs/navigation-validation.md) · [版本记录](CHANGELOG.md)
 
-本项目采用 Apache-2.0。上游版权、许可证和第三方归属随技能包提供。 [许可证](LICENSE) · [来源和改动](skills/medical-affairs-workflows/NOTICE)
+本项目的原创内容采用 Apache-2.0。第三方来源、授权和归属见来源索引。 [许可证](LICENSE) · [来源与归属](SOURCES.md)

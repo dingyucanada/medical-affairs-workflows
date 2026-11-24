@@ -1,0 +1,4 @@
+interface:
+  display_name: "就医与健康导航"
+  short_description: "查找合适的就医入口，理解检查报告，并为预防保健、慢病和罕见病就诊做好准备"
+  default_prompt: "用 $medical-health-navigation 帮我准备一次就诊，整理我提供的资料、合适入口和想向医生确认的问题。"

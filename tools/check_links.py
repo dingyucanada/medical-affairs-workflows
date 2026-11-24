@@ -10,7 +10,7 @@ MAPPING = SKILL / "references" / "source-map.md"
 LINK = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 errors = []
 documents = [*ROOT.glob("*.md"), *ROOT.glob("docs/*.md"),
-             *ROOT.glob("evals/*.md"), SKILL / "SKILL.md", *SKILL.glob("references/*.md")]
+             *ROOT.glob("evals/*.md"), *ROOT.glob("skills/*/SKILL.md"), *ROOT.glob("skills/*/references/*.md")]
 for document in documents:
     inline_code_free = re.sub(r"`[^`\n]*`", "", document.read_text(encoding="utf-8"))
     for target in LINK.findall(inline_code_free):

@@ -1,0 +1,23 @@
+name: 补充就医主题
+description: 提议增加就医入口、复诊、保健或病种资料
+body:
+  - type: markdown
+    attributes:
+      value: 请使用合成或公开信息。不要粘贴可识别的病历、报告或联系方式。
+  - type: input
+    id: task
+    attributes:
+      label: 希望解决的就医问题
+      placeholder: 例如儿童转成人专科时的随访交接
+    validations:
+      required: true
+  - type: input
+    id: audience
+    attributes:
+      label: 适用人群和地区
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 公开原始来源、版本和预期输出
